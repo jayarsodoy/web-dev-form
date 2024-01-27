@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="icon" href="../LOGO/clipart708931.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="forms.css">
+  <script src="transition.js"></script>
+</head>
+<body>
+  <header class="main-head">
+    <div class="main-head-logo">
+      <img src="assets/images/clipart708931.png" alt="pup-logo" class="pup-logo">
+      <p>Polytechnic University of the Philippines</p>
+    </div>
+    <nav class="main-head-nav">
+      <ul>
+        <li> <a href="index.html" onclick="changePage(event)"> HOME </a> </li>
+        <li> <a href="apply.html" onclick="changePage(event)"> HOW TO APPLY </a> </li>
+        <li> <a href="forms.html" onclick="changePage(event)"> FORM </a> </li>
+        <li> <a href="about.html" onclick="changePage(event)"> ABOUT </a> </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="message-container">
+    <div class="message" id="message"
+    style="
+      display: none;
+      font-weight: bold;
+      color: green;
+      padding: 8px;
+      background-color: beige;
+      border-radius: 4px;
+      border-color: aquamarine;
+    "></div>
+  </section>
+<main>
+  </section>
+  <section class="main">
+    <form id="form" method="POST">
+      <section id="page1" class="form-page">
+        <div class="page-button">
+          <button class="stud-status-btn" href="#">
+            <p>STATUS</p>
+          </button>
+          <div onclick="validateCheckbox()" class="stud-info-btn">
+            <p>ID INFORMATION</p>
+          </div> 
+        </div>
+
+
+        <h2>Application For New / Replacement of Identification Card</h2>
+        <!-- <button onclick="nextPage()">Next</button> -->
+        <section class="student-type-container">
+          <p class="status-purpose">Choose your purpose:</p>
+        
+          <div class="transferee">
+            <input type="checkbox" id="transferee" name="StudentType" value="transferee"/>
+            <label for="transferee">Transferee</label>
+          </div>
+
+          <div class="shiftee">
+            <input type="checkbox" id="shiftee" name="StudentType" value="shiftee" />
+            <label for="shiftee">Shiftee</label>
+          </div>
+
+          <div class="late-filling">
+            <input type="checkbox" id="late-filling" name="StudentType" value="late-filling" />
+            <label for="late-filling">Late Filling</label>
+          </div>
+
+          <div class="damaged">
+            <input type="checkbox" id="damaged" name="StudentType" value="damaged" />
+            <label for="damaged">Damaged</label>
+          </div>
+
+          <div class="old-id">
+            <input type="checkbox" id="old-id" name="StudentType" value="old-id" />
+            <label for="old-filling">Old ID</label>
+          </div>
+          
+          <div class="correction-of-entry">
+            <input type="checkbox" id="correction-of-entry" name="StudentType" value="correction-of-entry" />
+            <label for="correction-of-entry">Correction of Entry</label>
+          </div>
+
+          <p class="status-purpose">Choose your level of education:</p>
+
+          <div class="lhs-shs">
+            <input type="checkbox" id="lhs" name="StudentType" value="lhs" />
+            <label for="lhs">LHS</label>
+
+            <input type="checkbox" id="shs" name="StudentType" value="shs" />
+            <label for="shs">SHS</label>
+          </div>
+
+          <div class="graduate-school">
+            <input type="checkbox" id="graduate-school" name="StudentType" value="graduate-school" />
+            <label for="graduate-school">Graduate School</label>
+          </div>
+
+          <div class="undergrad">
+            <input type="checkbox" id="undergrad" name="StudentType" value="undergrad" />
+            <label for="undergrad">Undergrad</label>
+          </div>
+
+          <div class="open-university">
+            <input type="checkbox" id="open-university" name="StudentType" value="open-university" />
+            <label for="open-university">Open University</label>
+          </div>
+
+          <div class="college-of-law">
+            <input type="checkbox" id="college-of-law" name="StudentType" value="college-of-law" />
+            <label for="college-of-law">College of Law</label>
+          </div>
+
+          <div class="institute-of-technology">
+            <input type="checkbox" id="institute-of-technology" name="StudentType" value="institute-of-technology" />
+            <label for="institute-of-technology">Institute of Technology</label>
+          </div>
+        </section>
+        
+        <p onclick="validateCheckbox()" class="next-btn">NEXT</p>
+      </section>
+
+
+      <section id="page2" class="form-page" style="display: none;">
+        <div class="second-page-button">
+          <button class="stud-info-btn" onclick="previousPage()">
+            <p>STATUS</p>
+          </button>
+          <button href="#" class="stud-status-second-btn">
+            <p>ID INFORMATION</p>
+          </button> 
+        </div>
+        <div class="id-information-container">
+          <h2>ID Information</h2>
+
+        
+          <div class="id-first-row">
+            <label for="student-number">Student Id</label>
+            <label for="first-name">First Name</label>
+            <label for="middle-name">Middle Name</label>
+            <label for="last-name">Last Name</label>
+
+            <input class="input" type="text" id="student-number" name="StudentID" required>
+            <input class="input" type="text" id="first-name" name="FirstName" required>
+            <input class="input" type="text" id="middle-name" name="MiddleName" required>
+            <input class="input" type="text" id="last-name" name="LastName" required>
+          </div>
+
+
+          <div class="id-second-row">
+            <label for="">Gender</label>
+            <label for="date-of-birth">Date of Birth</label>
+            <label for="college">College</label>
+            
+            <div class="gender">
+              <input type="radio" id="gender" name="Gender" value="Male" required>  
+              <p>Male</p>
+              <input type="radio" id="gender" name="Gender" value="Female" required>
+              <p>Female</p>
+            </div>
+
+            <input type="date" class="input" id="date-of-birth" name="Birthdate" min="2010-01-01" required>
+            <select id="college" name="College" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="CAF">CAF</option>
+              <option value="CADBE">CADBE</option>
+              <option value="CAL">CAL</option>
+              <option value="CBA">CBA</option>
+              <option value="COC">COC</option>
+              <option value="CCIS">CCIS</option>
+              <option value="COED">COED</option>
+              <option value="CE">CE</option>
+              <option value="CHK">CHK</option>
+              <option value="CL">CL</option>
+              <option value="CPSPA">CPSPA</option>
+              <option value="CSSD">CSSD</option>
+              <option value="CS">CS</option>
+              <option value="CTHTM">CTHTM</option>
+            </select>
+          </div>
+
+
+          <div class="id-third-row">
+            <label for="course-section">Course, Yr. & Section</label>
+            <label for="phone-number">Phone/Mobile no.</label>
+            <label for="email">Email address</label>
+
+            <input type="text" class="input" id="course-section" name="CourseandSection" required>
+            <input type="tel" class="input" id="telephone" name="PhoneNo" required placeholder="09xxxxxxxxx">
+            <input type="text" class="input" id="email" name="EmailAddress" required>
+          </div>
+
+
+          <div class="id-fourth-row">
+            <label for="address">Address</label>
+            <input type="text" class="input" id="address" name="Address" oninput="validateMaxAddress()" required>
+          </div>
+          
+
+          <div class="id-fifth-row">
+            <p>In case of emergency, please notify:</p>
+          </div>
+
+          <div class="id-sixth-row">
+            <label for="emergency-name">Complete Name</label>
+            <label for="emergency-phone">Phone/Mobile no.</label>
+            <input type="text" class="input" id="emergency-name" name="EmergencyCompleteName" required>
+            <input type="tel" class="input" id="emergency-phone" name="EmergencyPhoneNo." required placeholder="09xxxxxxxxx" minlength="11" maxlength="11" inputmode="numeric">
+          </div>
+          
+
+          <div class="id-seventh-row">
+            <label for="emergency-address">Address</label>
+            <input type="text" class="input" id="emergency-address" name="EmergencyAddress" required>
+          </div>
+
+          <div class="id-eighth-row">
+            <p onclick="previousPage()" class="back-btn">BACK</p>
+            <input type="submit" onclick="validateInput(), validateSelect(), validateTelephone()" id="submit-button">
+          </div>
+        </div>
+      </section>
+    </form>
+  </section>
+</main>
+
+  <footer>
+    <div class="contact">
+      <span>CONTACT US </span>
+      <p>
+        Phone: (+63 2) 5335-1PUP (5335-1787) or 5335-1777 <br>
+      </p>
+      <p>Email: inquire@pup.edu.ph
+      </p>
+    </div>
+    <p class="footer-copyright">
+      © 1998-2021 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
+    </p>
+
+    <div class="footer-sm-container">
+      <span>KEEP IN TOUCH </span>
+      <div class="footer-logo-container">
+        <div class="sm-fb"></div>
+        <div class="sm-tt"></div>
+        <div class="sm-ig"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    function nextPage() {
+        document.getElementById('page' + currentPage).style.display = 'none';
+        currentPage++;
+        document.getElementById('page' + currentPage).style.display = 'block';
+    }
+    
+    function previousPage() {
+        document.getElementById('page' + currentPage).style.display = 'none';
+        currentPage--;
+        document.getElementById('page' + currentPage).style.display = 'block';
+    }
+
+
+    var currentPage = 1;
+    var count = 1;
+    
+    function validateCheckbox() {
+      var checkboxes = document.getElementsByName("StudentType");
+      var checked = false;
+      for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+              checked = true;
+              count = 1;
+          }
+      }
+      if (!checked) {
+          alert("Please check at least one checkbox");
+          return false; // prevent form submission
+      }
+      if (count = 1){
+        nextPage()
+      }
+      return true; // allow form submission
+    }
+
+    function validateMaxAddress() {
+    var input = document.getElementById('address');
+    var maxLength = 85;
+    var currentLength = input.value.length;
+
+      if (currentLength > maxLength) {
+        document.getElementById('address').style.borderColor = "red";
+        alert('Username cannot exceed ' + maxLength + ' characters.');
+      // You may also consider truncating or modifying the input value here
+      }
+    }
+
+    function validateInput() {
+      var fieldIds = [
+      'student-number', 'first-name', 'middle-name', 'last-name', 'gender',
+      'date-of-birth', 'college', 'course-section', 'telephone', 'email',
+      'address', 'emergency-name', 'emergency-phone', 'emergency-address'
+    ];
+
+    // Iterate over each field and perform validation
+    for (var i = 0; i < fieldIds.length; i++) {
+      var inputField = document.getElementById(fieldIds[i]);
+
+      if (inputField.value.trim() === '') {
+        inputField.classList.add('invalid');
+      } else {
+        inputField.classList.remove('invalid');
+      }
+      }
+    }
+
+    function validateSelect() {
+      var mySelect = document.getElementById('college');
+
+      // Check if the selected option is disabled
+      if (mySelect.options[mySelect.selectedIndex].disabled) {
+        // Add the 'invalid' class to change the border color
+        document.getElementById("college").style.borderColor = "red";
+      } else {
+        // Remove the 'invalid' class
+        document.getElementById("college").style.borderColor = "#ccc";
+      }
+    }
+
+
+    document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission
+    document.getElementById("message").textContent = "Submitting..";
+    document.getElementById("message").style.display = "block";
+    document.getElementById("submit-button").disabled = true;
+
+    // Collect the form data
+    var formData = new FormData(this);
+
+
+    // Process checkbox values
+    var studentTypeValues = [];
+    var checkboxes = document.querySelectorAll('input[type=checkbox][name="StudentType"]:checked');
+    checkboxes.forEach(function(checkbox) {
+      studentTypeValues.push(checkbox.value);
+    });
+
+    // Add checkbox values to formData
+    formData.append('StudentType', studentTypeValues.join(', '));
+
+    // Send a POST request to your Google Apps Script
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyPbEHyT4OpzsdjarBZ7kFmyPeOQ3ANTf2VodFvq6UyN97k0yq09n6peleb7Uh7YuTf/exec",
+      {
+        redirect: "follow",
+        method: "POST",
+        body: new URLSearchParams(formData).toString(),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    )
+    .then(function (response) {
+      // Check if the request was successful
+      if (response) {
+        return response; // Assuming your script returns JSON response
+      } else {
+        throw new Error("Failed to submit the form.");
+      }
+    })
+    .then(function (data) {
+      // Display a success message
+      document.getElementById("message").textContent =
+        "Data submitted successfully!";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("message").style.backgroundColor = "green";
+      document.getElementById("message").style.color = "beige";
+      document.getElementById("submit-button").disabled = false;
+      document.getElementById("form").reset();
+      previousPage();
+
+      setTimeout(function () {
+        document.getElementById("message").textContent = "";
+        document.getElementById("message").style.display = "none";
+      }, 2600);
+    })
+    .catch(function (error) {
+      // Handle errors, you can display an error message here
+      console.error(error);
+      document.getElementById("message").textContent =
+        "An error occurred while submitting the form.";
+      document.getElementById("message").style.display = "block";
+      });
+    });
+  </script>
+  
+</body>
+</html>

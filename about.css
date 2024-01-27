@@ -1,0 +1,285 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  background-image: url(assets/images/pup.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.main-head{
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color:#851713;
+  display: flex;
+  justify-content:space-between;
+  z-index: 1000;
+  box-shadow:0px 17px 27px rgba(0, 0, 0, 0.53);
+}
+
+p{
+  font-size: 18px;
+  line-height: 18px;
+  font-family: Roboto;
+
+}
+
+
+.main-head-logo{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: #fff;
+
+}
+
+.main-head-logo p{
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+img{
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+
+.main-head-nav{
+  height: 100%;
+  width: fit-content;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+}
+
+.main-head-nav ul{
+  margin-left: 30px;
+}
+
+.main-head-nav ul li{
+  display: inline;
+  float: left;
+  margin-right: 10px;
+}
+
+
+.main-head-nav ul li a{
+  padding: 0 10px;
+  font-family: 'Roboto';
+  line-height: 60px;
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.main-head-nav ul li:nth-child(4){
+  border-bottom: 2px solid #fff;
+}
+.main-head-nav ul li a:hover {
+  cursor: pointer;
+  transition-delay: 90ms;
+  transition-duration: 80ms;
+  transform: translateY(-5px);
+}
+/* footer */
+footer{
+  position: relative;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color:#851713;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  box-shadow:  0px 0px 80px rgba(0, 0, 0, 0.86);
+  justify-content: space-between;
+}
+
+footer p{
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+footer div span{
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+
+footer div p{
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.footer-copyright{
+  position: relative;
+  left: -60px;
+}
+
+footer div p:first-child{
+  position: relative;
+  top: -5px;
+}
+
+.footer-logo-container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.footer-logo-container a{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.sm-fb{
+  background-image: url(assets/logo/facebook-1-svgrepo-com.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.sm-tt{
+  background-image: url(assets/logo/1690643591twitter-x-logo-png.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.sm-ig{
+  background-image: url(assets/logo/instagram-1-svgrepo-com.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+main{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color:hsla(0, 0%, 100%, 0.712);
+  padding: 50px 150px;
+  padding-bottom: 150px;
+}
+/* --------------------------------------- */
+.pup-vision{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+.pup-vision h3, .pup-mission h3{
+  font-size: 24px;
+  font-weight: bolder;
+  color: #800201;
+}
+
+.pup-vision h2{
+  font-size: 36px;
+  font-weight: bolder;
+  color: #6f6f74;
+  text-align: center;
+}
+
+
+.pup-vision p{
+  font-size: 26px;
+  font-weight: bold;
+  color: #6f6f74;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pup-mission{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+}
+
+.pup-mission p{
+  font-size: 18px;
+  color: #6f6f74;
+
+}
+
+
+.pup-mission .divider-mission{
+  margin-top: 10px;
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  border-top: 2px solid #6f6f74; 
+  border-bottom: 2px solid #6f6f74; 
+  padding: 10px 5px;
+  justify-content: space-between;
+}
+
+ul li{
+  list-style:disc;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
+}
+
+.right-side, .left-side{
+  width: 45%;
+  height: fit-content;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 3.3ch;
+}
+
+.pup-mission .second-divider-mission{
+  margin-top: 10px;
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  padding: 10px 5px;
+  padding-left: 20px;
+  justify-content: space-between;
+  color: #6f6f74;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
